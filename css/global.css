@@ -562,29 +562,54 @@ h1 {
 
 
 /* ==========================================================
-   CRÉDITO DE DESENVOLVIMENTO - STARBUGS
+   RODAPÉ INFERIOR + CRÉDITO STARBUGS
    ========================================================== */
 
-.developer-credit {
-    color: rgba(255, 255, 255, 0.55);
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 24px 20px 30px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    gap: 8px;
 }
 
-.developer-credit a {
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Crédito do desenvolvedor */
+.footer-bottom .developer-credit {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 12px;
+}
+
+.footer-bottom .developer-credit a {
     color: #c9914b;
     text-decoration: none;
     font-weight: 700;
-    letter-spacing: 0.02em;
-    transition:
-        color 0.2s ease,
-        opacity 0.2s ease;
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.developer-credit a:hover {
+.footer-bottom .developer-credit a:hover {
     color: #ffffff;
 }
 
-.developer-credit a:focus-visible {
-    outline: 2px solid #c9914b;
-    outline-offset: 4px;
-    border-radius: 3px;
+/* Celular */
+@media (max-width: 768px) {
+    .footer-bottom {
+        margin-top: 30px;
+        padding: 20px 16px 90px;
+    }
 }
