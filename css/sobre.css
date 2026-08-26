@@ -1,0 +1,107 @@
+/* ==========================================================
+   SOBRE NÓS
+========================================================== */
+
+.page-hero-about {
+  background:
+    linear-gradient(rgba(17,13,10,.58), rgba(17,13,10,.78)),
+    url("../assets/images/sobre/hero-sobre.webp")
+    center center / cover no-repeat;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+}
+
+.about-copy {
+  color: var(--color-text-soft);
+  font-size: 1.04rem;
+}
+
+.about-copy p + p {
+  margin-top: 22px;
+}
+
+.about-image-section {
+  padding-bottom: 120px;
+  background: var(--color-bg);
+}
+
+.about-image-section img {
+  width: 100%;
+  max-height: 760px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--color-line);
+}
+
+.value-card {
+  min-height: 300px;
+  padding: 34px 38px 0 0;
+  border-right: 1px solid var(--color-line);
+}
+
+.value-card + .value-card {
+  padding-left: 38px;
+}
+
+.value-card:last-child {
+  border-right: 0;
+}
+
+.value-card span {
+  color: var(--color-accent-dark);
+  font-size: .75rem;
+}
+
+.value-card h3 {
+  margin-top: 80px;
+  margin-bottom: 14px;
+  font-size: 1.7rem;
+}
+
+.value-card p {
+  color: var(--color-text-soft);
+}
+
+.about-corporate {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 90px;
+}
+
+.about-corporate p {
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 820px) {
+  .about-grid,
+  .about-corporate {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card,
+  .value-card + .value-card {
+    min-height: auto;
+    padding: 30px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .value-card h3 {
+    margin-top: 35px;
+  }
+}

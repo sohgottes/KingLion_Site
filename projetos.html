@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | KingLion Móveis Planejados</title>
+  <meta name="description" content="Conheça projetos residenciais e corporativos desenvolvidos pela KingLion Móveis Planejados.">
+  <meta name="theme-color" content="#17130f">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/projetos.css">
+</head>
+<body>
+
+  <header class="site-header solid" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logos/logo.png" alt="KingLion Móveis Planejados">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Início</a>
+        <a class="active" href="projetos.html">Projetos</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="index.html#processo">Processo</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-small header-cta"
+         href="https://wa.me/5512981214048"
+         target="_blank"
+         rel="noopener">
+        Solicitar orçamento
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero-projects">
+      <div class="container reveal">
+        <p class="eyebrow light">Nosso portfólio</p>
+        <h1>Projetos feitos para cada espaço.</h1>
+        <p>
+          Explore ambientes residenciais e corporativos desenvolvidos pela KingLion.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FILTROS
+         Para criar nova categoria:
+         1. crie um novo botão com data-filter
+         2. use a mesma palavra no data-category das fotos
+    ======================================================= -->
+    <section class="section gallery-section">
+      <div class="container">
+
+        <div class="gallery-toolbar reveal">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="cozinhas">Cozinhas</button>
+          <button class="filter-btn" data-filter="dormitorios">Dormitórios</button>
+          <button class="filter-btn" data-filter="salas">Salas</button>
+          <button class="filter-btn" data-filter="banheiros">Banheiros</button>
+          <button class="filter-btn" data-filter="corporativo">Corporativo</button>
+          <button class="filter-btn" data-filter="outros">Outros</button>
+        </div>
+
+        <!-- ======================================================
+             GALERIA AUTOMÁTICA
+             As fotos são cadastradas em js/projetos.js.
+             Você NÃO precisa copiar HTML para adicionar imagens.
+        ======================================================= -->
+        <div class="gallery-grid" id="galleryGrid"></div>
+
+        <div class="gallery-more">
+          <button class="btn" id="loadMoreBtn" type="button">Ver mais projetos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL PARA AMPLIAR IMAGEM -->
+    <div class="image-modal" id="imageModal" aria-hidden="true">
+      <button class="modal-close" id="modalClose" aria-label="Fechar imagem">×</button>
+      <img id="modalImage" src="" alt="">
+      <p id="modalCaption"></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logos/logo.png" alt="KingLion Móveis Planejados">
+        <p>Marcenaria de alto padrão para ambientes residenciais e corporativos.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <a href="https://wa.me/5512981214048" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/kinglionmoveisplanejadosbr/" target="_blank" rel="noopener">Instagram</a>
+        <span>São José dos Campos - SP</span>
+      </div>
+    </div>
+    <div class="footer-credits">
+    <span>© 2026 KingLion Móveis Planejados. Todos os direitos reservados.</span>
+
+    <span class="developer-credit">
+        Design & Desenvolvimento por StarBugs ↗
+        <a
+            href="https://sohgottes.github.io/new_portifolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conheça o portfólio da StarBugs"
+        >
+            StarBugs ↗
+        </a>
+    </span>
+</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  
+  <!-- WHATSAPP FLUTUANTE — número centralizado em js/main.js -->
+  <a class="whatsapp-float"
+     href="https://wa.me/5512981214048?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20KingLion%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+     target="_blank" rel="noopener" aria-label="Falar com a KingLion pelo WhatsApp">
+    <span class="whatsapp-icon" aria-hidden="true">☎</span>
+    <span class="whatsapp-label">Fale conosco</span>
+  </a>
+<script src="js/projetos.js"></script>
+</body>
+</html>

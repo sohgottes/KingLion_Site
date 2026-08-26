@@ -1,0 +1,115 @@
+/* ==========================================================
+   CONTATO
+========================================================== */
+
+.contact-hero {
+  min-height: 60vh;
+  background:
+    linear-gradient(rgba(17,13,10,.72), rgba(17,13,10,.84)),
+    url("../assets/images/home/cta.webp")
+    center center / cover no-repeat;
+}
+
+.contact-section {
+  background: var(--color-bg);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 100px;
+}
+
+.contact-list {
+  margin-top: 50px;
+  border-top: 1px solid var(--color-line);
+}
+
+.contact-list a,
+.contact-list > div {
+  padding: 22px 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-line);
+  text-decoration: none;
+}
+
+.contact-list span {
+  color: var(--color-text-soft);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.contact-list strong {
+  margin-top: 4px;
+  font-size: 1.05rem;
+}
+
+/* FORMULÁRIO */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 38px;
+  border-radius: var(--radius-md);
+  background: white;
+  box-shadow: 0 20px 70px rgba(25,20,15,.08);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  border: 1px solid #d8d0c7;
+  border-radius: 10px;
+  background: #fbfaf8;
+  padding: 14px 15px;
+  outline: none;
+}
+
+.field input,
+.field select {
+  min-height: 50px;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: var(--color-accent);
+}
+
+@media (max-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .field-full {
+    grid-column: auto;
+  }
+}

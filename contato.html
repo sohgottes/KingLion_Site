@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | KingLion Móveis Planejados</title>
+  <meta name="description" content="Solicite seu projeto de móveis planejados com a KingLion.">
+  <meta name="theme-color" content="#17130f">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contato.css">
+</head>
+<body>
+
+  <header class="site-header solid" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logos/logo.png" alt="KingLion Móveis Planejados">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="index.html#processo">Processo</a>
+        <a class="active" href="contato.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-small header-cta"
+         href="https://wa.me/5512981214048"
+         target="_blank"
+         rel="noopener">
+        Solicitar orçamento
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero contact-hero">
+      <div class="container reveal">
+        <p class="eyebrow light">Vamos conversar?</p>
+        <h1>Conte para nós o que você deseja criar.</h1>
+        <p>Fale com a KingLion e dê o primeiro passo para transformar seu ambiente.</p>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Atendimento</p>
+          <h2 class="section-title">Escolha o canal que preferir.</h2>
+
+          <div class="contact-list">
+            <a href="https://wa.me/5512981214048" target="_blank" rel="noopener">
+              <span>WhatsApp</span>
+              <strong>(12) 99178-2030</strong>
+            </a>
+
+            <a href="https://www.instagram.com/kinglionmoveisplanejadosbr/" target="_blank" rel="noopener">
+              <span>Instagram</span>
+              <strong>@kinglionmoveisplanejadosbr</strong>
+            </a>
+
+            <div>
+              <span>Localização</span>
+              <strong>São José dos Campos - SP</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================================================
+             FORMULÁRIO
+
+             Como o GitHub Pages é estático, este formulário NÃO
+             envia sozinho para um servidor.
+
+             Nesta versão, o JavaScript transforma os campos em
+             uma mensagem e abre o WhatsApp.
+
+             Você pode alterar os campos abaixo normalmente.
+        ======================================================= -->
+        <form class="contact-form reveal" id="whatsappForm">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="telefone">WhatsApp</label>
+            <input id="telefone" name="telefone" type="tel" required>
+          </div>
+
+          <div class="field">
+            <label for="cidade">Cidade</label>
+            <input id="cidade" name="cidade" type="text">
+          </div>
+
+          <div class="field">
+            <label for="tipo">Tipo de projeto</label>
+            <select id="tipo" name="tipo">
+              <option value="Residencial">Residencial</option>
+              <option value="Corporativo">Corporativo</option>
+              <option value="Apartamento completo">Apartamento completo</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="field field-full">
+            <label for="ambiente">Ambiente</label>
+            <input id="ambiente" name="ambiente" type="text" placeholder="Ex.: cozinha, dormitório, apartamento completo">
+          </div>
+
+          <div class="field field-full">
+            <label for="mensagem">Conte um pouco sobre o projeto</label>
+            <textarea id="mensagem" name="mensagem" rows="6"></textarea>
+          </div>
+
+          <button class="btn field-full" type="submit">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logos/logo.png" alt="KingLion Móveis Planejados">
+        <p>Marcenaria de alto padrão para ambientes residenciais e corporativos.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <a href="https://wa.me/5512981214048" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/kinglionmoveisplanejadosbr/" target="_blank" rel="noopener">Instagram</a>
+        <span>São José dos Campos - SP</span>
+      </div>
+    </div>
+    <div class="footer-credits">
+    <span>© 2026 KingLion Móveis Planejados. Todos os direitos reservados.</span>
+
+    <span class="developer-credit">
+        Design & Desenvolvimento por StarBugs ↗
+        <a
+            href="https://sohgottes.github.io/new_portifolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conheça o portfólio da StarBugs"
+        >
+            StarBugs ↗
+        </a>
+    </span>
+</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  
+  <!-- WHATSAPP FLUTUANTE — número centralizado em js/main.js -->
+  <a class="whatsapp-float"
+     href="https://wa.me/5512981214048?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20KingLion%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+     target="_blank" rel="noopener" aria-label="Falar com a KingLion pelo WhatsApp">
+    <span class="whatsapp-icon" aria-hidden="true">☎</span>
+    <span class="whatsapp-label">Fale conosco</span>
+  </a>
+<script>
+    /*
+      ===========================================================
+      FORMULÁRIO -> WHATSAPP
+
+      ALTERE apenas WHATSAPP_NUMBER caso o número mude.
+      Formato:
+      código do país + DDD + número
+      SEM espaços, traços ou parênteses.
+    ===========================================================
+    */
+    const WHATSAPP_NUMBER = "5512981214048";
+
+    document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const cidade = document.getElementById("cidade").value.trim();
+      const tipo = document.getElementById("tipo").value;
+      const ambiente = document.getElementById("ambiente").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      const texto =
+`Olá, KingLion! Gostaria de falar sobre um projeto.
+
+Nome: ${nome}
+WhatsApp: ${telefone}
+Cidade: ${cidade || "Não informado"}
+Tipo: ${tipo}
+Ambiente: ${ambiente || "Não informado"}
+
+Mensagem:
+${mensagem || "Gostaria de receber mais informações."}`;
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>

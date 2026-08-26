@@ -1,0 +1,559 @@
+/* ==========================================================
+   HOME - CSS EXCLUSIVO DA PÁGINA INICIAL
+========================================================== */
+
+/* HERO
+   Troque a imagem alterando apenas o caminho abaixo.
+*/
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  color: white;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background:
+    url("../assets/images/home/hero.webp")
+    center center / cover no-repeat;
+  transform: scale(1.02);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 10, 8, 0.78) 0%,
+      rgba(12, 10, 8, 0.40) 50%,
+      rgba(12, 10, 8, 0.18) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(12, 10, 8, 0.70) 0%,
+      rgba(12, 10, 8, 0) 50%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 95px;
+}
+
+.hero h1 {
+  max-width: 980px;
+  margin-bottom: 26px;
+}
+
+.hero-text {
+  max-width: 720px;
+  margin-bottom: 34px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-scroll {
+  position: absolute;
+  right: 42px;
+  bottom: 36px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.scroll-line {
+  width: 42px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* INTRO */
+.split-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 90px;
+}
+
+.intro-copy {
+  align-self: end;
+}
+
+.intro-copy p {
+  color: var(--color-text-soft);
+  font-size: 1.08rem;
+}
+
+/* PROJETOS */
+.projects-preview {
+  background: #ddd5cb;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-auto-rows: 320px;
+  gap: 18px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  background: #cfc6ba;
+}
+
+.project-card-large {
+  grid-row: span 2;
+}
+
+.project-card-wide {
+  grid-column: 2;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(.2,.7,.2,1);
+}
+
+.project-card:hover img {
+  transform: scale(1.045);
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(15, 12, 10, 0.68),
+    rgba(15, 12, 10, 0.02) 60%
+  );
+}
+
+.project-card-overlay {
+  position: absolute;
+  left: 28px;
+  bottom: 24px;
+  z-index: 2;
+  color: white;
+}
+
+.project-card-overlay span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project-card-overlay h3 {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+/* PROJETO 3D */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.feature-image {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.feature-image img {
+  width: 100%;
+  /* Imagem horizontal para deixar esta seção mais baixa e elegante. */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.feature-copy p {
+  max-width: 650px;
+}
+
+.feature-copy .btn {
+  margin-top: 16px;
+}
+
+/* PROCESSO */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--color-line);
+}
+
+.process-step {
+  min-height: 290px;
+  padding: 32px 26px 24px 0;
+  border-right: 1px solid var(--color-line);
+}
+
+.process-step + .process-step {
+  padding-left: 26px;
+}
+
+.process-step:last-child {
+  border-right: 0;
+}
+
+.process-number {
+  display: block;
+  margin-bottom: 78px;
+  color: var(--color-accent-dark);
+  font-size: 0.76rem;
+}
+
+.process-step h3 {
+  margin-bottom: 12px;
+  font-size: 1.45rem;
+}
+
+.process-step p {
+  color: var(--color-text-soft);
+  font-size: 0.92rem;
+}
+
+/* BENEFÍCIOS */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--color-line);
+}
+
+.benefit {
+  min-height: 240px;
+  padding: 34px 48px 34px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.benefit:nth-child(odd) {
+  border-right: 1px solid var(--color-line);
+}
+
+.benefit:nth-child(even) {
+  padding-left: 48px;
+}
+
+.benefit span {
+  color: var(--color-accent-dark);
+  font-size: 0.72rem;
+}
+
+.benefit h3 {
+  margin: 50px 0 12px;
+  font-size: 1.65rem;
+}
+
+.benefit p {
+  max-width: 520px;
+  margin-bottom: 0;
+  color: var(--color-text-soft);
+}
+
+/* NÚMEROS */
+.stats {
+  padding: 80px 0;
+  background: var(--color-dark-2);
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat {
+  padding: 10px 34px;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.stat:first-child {
+  border-left: 0;
+}
+
+.stat strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #d7b184;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+.stat-value {
+  display: block;
+  margin-bottom: 5px;
+  font-size: clamp(2.3rem, 4vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.stat p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* CTA FINAL */
+.final-cta {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+.final-cta-media {
+  position: absolute;
+  inset: 0;
+  background:
+    url("../assets/images/home/cta.webp")
+    center center / cover no-repeat;
+}
+
+.final-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 13, 10, 0.66);
+}
+
+.final-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.final-cta h2 {
+  max-width: 900px;
+  margin-bottom: 22px;
+  font-size: clamp(2.7rem, 6vw, 6rem);
+  letter-spacing: -0.05em;
+}
+
+.final-cta p {
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,.78);
+}
+
+/* RESPONSIVO */
+@media (max-width: 980px) {
+  .split-intro,
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-step:nth-child(2) {
+    border-right: 0;
+  }
+
+  .process-step:nth-child(n+3) {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 38px 0;
+  }
+
+  .stat:nth-child(3) {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-content {
+    padding-bottom: 85px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 310px;
+  }
+
+  .project-card-large,
+  .project-card-wide {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .process-grid,
+  .benefits-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step,
+  .process-step + .process-step,
+  .benefit,
+  .benefit:nth-child(even) {
+    min-height: auto;
+    padding: 28px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .process-step:nth-child(n+3) {
+    border-top: 0;
+  }
+
+  .process-number,
+  .benefit h3 {
+    margin-top: 0;
+    margin-bottom: 26px;
+  }
+
+  .stat,
+  .stat:nth-child(3) {
+    padding: 18px 0;
+    border-left: 0;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+  }
+}
+
+/* ==========================================================
+   PROJETO 3D — VERSÃO COMPACTA
+   Mantém a imagem inteira, sem recorte, e reduz a altura da seção.
+========================================================== */
+.feature-3d {
+  padding: 64px 0;
+}
+
+.feature-3d .feature-grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  gap: 56px;
+}
+
+.feature-3d .feature-image {
+  background: #0f0d0b;
+}
+
+.feature-3d .feature-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.feature-3d .section-title {
+  font-size: clamp(2.25rem, 3.5vw, 4.25rem);
+  line-height: .98;
+}
+
+.feature-3d .feature-copy p {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 980px) {
+  .feature-3d {
+    padding: 56px 0;
+  }
+
+  .feature-3d .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .feature-3d .feature-image {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 680px) {
+  .feature-3d {
+    padding: 42px 0;
+  }
+
+  .feature-3d .feature-grid {
+    gap: 28px;
+  }
+
+  .feature-3d .section-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+}
+
+
+/* ==========================================================
+   PROJETO 3D — COMPACTO DEFINITIVO
+   A seção fica propositalmente baixa. A foto 16:9 aparece inteira.
+========================================================== */
+.feature-3d { padding: 44px 0 !important; }
+.feature-3d .feature-grid {
+  grid-template-columns: minmax(0, 560px) minmax(300px, 500px) !important;
+  justify-content: center;
+  gap: 52px !important;
+  align-items: center;
+}
+.feature-3d .feature-image {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+.feature-3d .feature-image img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: contain !important;
+  display: block;
+}
+.feature-3d .section-title {
+  font-size: clamp(2rem, 2.8vw, 3.35rem) !important;
+  line-height: 1.02 !important;
+  margin-bottom: 14px;
+}
+.feature-3d .eyebrow { margin-bottom: 12px; }
+.feature-3d .feature-copy p {
+  font-size: .92rem;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+.feature-3d .feature-copy .btn { margin-top: 8px; }
+@media (max-width: 980px) {
+  .feature-3d { padding: 38px 0 !important; }
+  .feature-3d .feature-grid { grid-template-columns: 1fr !important; gap: 26px !important; }
+  .feature-3d .feature-image, .feature-3d .feature-copy { max-width: 680px; margin-inline: auto; width: 100%; }
+}
+@media (max-width: 680px) {
+  .feature-3d { padding: 30px 0 !important; }
+  .feature-3d .feature-grid { gap: 22px !important; }
+  .feature-3d .section-title { font-size: clamp(1.9rem, 9vw, 2.65rem) !important; }
+}
